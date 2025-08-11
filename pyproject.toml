@@ -1,0 +1,28 @@
+[project]
+name = "safespace-ai-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bs4>=0.0.2",
+    "duckduckgo-search>=8.1.1",
+    "faiss-cpu>=1.11.0.post1",
+    "fastapi>=0.116.1",
+    "geopy>=2.4.1",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.27",
+    "langchain-openai>=0.3.28",
+    "langgraph>=0.6.3",
+    "ollama>=0.5.1",
+    "openai>=1.98.0",
+    "pdfminer-six>=20250506",
+    "pydantic>=2.11.7",
+    "pypdf>=5.9.0",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.4",
+    "sentence-transformers>=5.0.0",
+    "streamlit>=1.47.1",
+    "twilio>=9.7.0",
+    "uvicorn>=0.35.0",
+]
