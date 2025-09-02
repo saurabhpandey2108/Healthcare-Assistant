@@ -54,6 +54,15 @@ The system features two modern web interfaces:
 - **API Documentation**: Interactive OpenAPI docs
 - **Type Safety**: Full Pydantic validation
 
+## 📸 Screenshots
+
+### Main Dashboard
+![Main Dashboard](assets/screenshot-dashboard.png)
+
+### Voice Interface
+![Voice Interface](assets/screenshot-voice.png)
+
+
 ## 📁 **Project Structure**
 
 ```
@@ -369,3 +378,4 @@ python main.py gradio  # Web interface
 **🎯 Your SAFESPACE AI AGENT is now running with professional MVC architecture, OpenAI integration, and comprehensive multimodal support!**
 
 *Remember: This system is designed to complement, not replace, professional mental health care.*
+
