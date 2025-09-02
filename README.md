@@ -57,10 +57,10 @@ The system features two modern web interfaces:
 ## 📸 Screenshots
 
 ### Main Dashboard
-![Main Dashboard](assets/screenshot-dashboard.png)
+![Main Dashboard]("C:\Users\saura\Pictures\Screenshots\Screenshot 2025-09-03 021046.png")
 
 ### Voice Interface
-![Voice Interface](assets/screenshot-voice.png)
+![Voice Interface]("C:\Users\saura\Pictures\Screenshots\Screenshot 2025-09-03 021046.png")
 
 
 ## 📁 **Project Structure**
@@ -378,4 +378,5 @@ python main.py gradio  # Web interface
 **🎯 Your SAFESPACE AI AGENT is now running with professional MVC architecture, OpenAI integration, and comprehensive multimodal support!**
 
 *Remember: This system is designed to complement, not replace, professional mental health care.*
+
 
