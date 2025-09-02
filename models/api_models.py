@@ -43,7 +43,7 @@ class ImageAnalysisRequest(BaseModel):
     """Request model for image analysis"""
     image_path: str = Field(..., description="Path to uploaded image")
     query: Optional[str] = Field(
-        default="Please analyze this image for mental health insights",
+        default="Please analyze this image for health insights",
         description="Analysis query for the image"
     )
     session_id: str = Field(default="default", description="Session identifier")

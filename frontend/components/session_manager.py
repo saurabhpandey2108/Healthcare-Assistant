@@ -124,12 +124,40 @@ class SessionManager:
     def add_indexed_item(self, item_name: str):
         """Add an item to the knowledge base for the active chat"""
         active_chat_id = st.session_state.active_chat_id
-        st.session_state.all_chats[active_chat_id]["indexed_items"].add(item_name)
+        indexed_items = st.session_state.all_chats[active_chat_id].get("indexed_items", set())
+        
+        # Ensure it's a set
+        if not isinstance(indexed_items, set):
+            indexed_items = set(indexed_items) if indexed_items else set()
+            
+        indexed_items.add(item_name)
+        st.session_state.all_chats[active_chat_id]["indexed_items"] = indexed_items
+    
+    def remove_indexed_item(self, item_name: str):
+        """Remove an item from the knowledge base for the active chat"""
+        active_chat_id = st.session_state.active_chat_id
+        indexed_items = st.session_state.all_chats[active_chat_id].get("indexed_items", set())
+        
+        # Ensure it's a set
+        if not isinstance(indexed_items, set):
+            indexed_items = set(indexed_items) if indexed_items else set()
+            
+        indexed_items.discard(item_name)  # discard won't raise error if item doesn't exist
+        st.session_state.all_chats[active_chat_id]["indexed_items"] = indexed_items
     
     def get_indexed_items(self) -> set:
         """Get indexed items for the active chat"""
         active_chat = self.get_active_chat()
-        return active_chat.get("indexed_items", set())
+        indexed_items = active_chat.get("indexed_items", set())
+        
+        # Ensure it's a set
+        if not isinstance(indexed_items, set):
+            indexed_items = set(indexed_items) if indexed_items else set()
+            # Update the session state with proper set
+            active_chat_id = st.session_state.active_chat_id
+            st.session_state.all_chats[active_chat_id]["indexed_items"] = indexed_items
+            
+        return indexed_items
     
     def export_chat_history(self, format: str = "json") -> str:
         """Export chat history in specified format"""

@@ -5,12 +5,25 @@ from twilio.rest import Client
 import requests
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
+import base64
+import tempfile
+import os
+from typing import Optional
+from gtts import gTTS
+import pygame
+from groq import Groq
+from openai import OpenAI
+from PIL import Image
+import io
 
 from backend.config import (
     TWILIO_ACCOUNT_SID,
     TWILIO_AUTH_TOKEN,
     TWILIO_FROM_NUMBER,
     EMERGENCY_CONTACT,
+    GROQ_API_KEY,
+    ELEVENLABS_API_KEY,
+    OPENAI_API_KEY,
 )
 from core.rag_manager import rag_manager
 
@@ -232,4 +245,197 @@ def find_nearby_therapists_by_location(location: str) -> str:
         return "The location service timed out. Please try again."
     except Exception as e:
         return f"An error occurred while searching for therapists: {e}"
+
+
+# --- Image Processing Functions ---
+
+def process_image_for_analysis(image_path: str) -> Optional[str]:
+    """
+    Process image file and convert to base64 for analysis.
+    
+    Args:
+        image_path: Path to the image file
+        
+    Returns:
+        Base64 encoded image string or None if processing fails
+    """
+    try:
+        with Image.open(image_path) as img:
+            # Convert to RGB if necessary
+            if img.mode != 'RGB':
+                img = img.convert('RGB')
+            
+            # Resize if too large (max 1024x1024)
+            if img.width > 1024 or img.height > 1024:
+                img.thumbnail((1024, 1024), Image.Resampling.LANCZOS)
+            
+            # Convert to base64
+            buffer = io.BytesIO()
+            img.save(buffer, format='JPEG')
+            img_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
+            
+            return img_base64
+            
+    except Exception as e:
+        print(f"Error processing image: {e}")
+        return None
+
+def analyze_image_with_groq(image_base64: str, query: str = "Analyze this image for mental health insights") -> str:
+    """
+    Analyze image using GROQ Vision API or OpenAI GPT-4 Vision.
+    
+    Args:
+        image_base64: Base64 encoded image
+        query: Analysis query
+        
+    Returns:
+        Analysis result text
+    """
+    # Try OpenAI GPT-4 Vision first
+    if OPENAI_API_KEY:
+        try:
+            client = OpenAI(api_key=OPENAI_API_KEY)
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are Dr. Emily Hartman, a compassionate clinical psychologist specializing in art therapy and visual emotional analysis. Analyze images with empathy and provide therapeutic insights."
+                    },
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": query},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/jpeg;base64,{image_base64}"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                max_tokens=500
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"OpenAI Vision analysis failed: {e}")
+    
+    # Fallback to GROQ
+    if GROQ_API_KEY:
+        try:
+            client = Groq(api_key=GROQ_API_KEY)
+            response = client.chat.completions.create(
+                model="llama-3.2-90b-vision-preview",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are Dr. Emily Hartman, a compassionate clinical psychologist specializing in art therapy and visual emotional analysis. Analyze images with empathy and provide therapeutic insights."
+                    },
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": query},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/jpeg;base64,{image_base64}"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                max_tokens=500
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"GROQ Vision analysis failed: {e}")
+    
+    return "I apologize, but I'm unable to analyze images at the moment. Please try again later or describe what you're seeing in the image."
+
+
+# --- Audio/Voice Functions ---
+
+def text_to_speech_gtts(text: str, language: str = 'en', slow: bool = False) -> str:
+    """
+    Convert text to speech using Google Text-to-Speech.
+    
+    Args:
+        text: Text to convert
+        language: Language code (default: 'en')
+        slow: Whether to speak slowly
+        
+    Returns:
+        Path to generated audio file
+    """
+    try:
+        tts = gTTS(text=text, lang=language, slow=slow)
+        
+        # Create temporary file
+        temp_file = tempfile.NamedTemporaryFile(suffix='.mp3', delete=False)
+        audio_file = temp_file.name
+        temp_file.close()
+        
+        # Save audio
+        tts.save(audio_file)
+        
+        return audio_file
+        
+    except Exception as e:
+        print(f"Error generating speech with gTTS: {e}")
+        return None
+
+def text_to_speech_elevenlabs(text: str, voice_id: str = "EXAVITQu4vr4xnSDxMaL") -> str:
+    """
+    Convert text to speech using ElevenLabs API.
+    
+    Args:
+        text: Text to convert
+        voice_id: ElevenLabs voice ID
+        
+    Returns:
+        Path to generated audio file or None if failed
+    """
+    if not ELEVENLABS_API_KEY:
+        print("ElevenLabs API key not configured, falling back to gTTS")
+        return text_to_speech_gtts(text)
+    
+    try:
+        url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+        
+        headers = {
+            "Accept": "audio/mpeg",
+            "Content-Type": "application/json",
+            "xi-api-key": ELEVENLABS_API_KEY
+        }
+        
+        data = {
+            "text": text,
+            "model_id": "eleven_monolingual_v1",
+            "voice_settings": {
+                "stability": 0.5,
+                "similarity_boost": 0.5
+            }
+        }
+        
+        response = requests.post(url, json=data, headers=headers)
+        
+        if response.status_code == 200:
+            # Create temporary file
+            temp_file = tempfile.NamedTemporaryFile(suffix='.mp3', delete=False)
+            audio_file = temp_file.name
+            temp_file.close()
+            
+            # Save audio
+            with open(audio_file, 'wb') as f:
+                f.write(response.content)
+            
+            return audio_file
+        else:
+            print(f"ElevenLabs API error: {response.status_code}")
+            return text_to_speech_gtts(text)
+            
+    except Exception as e:
+        print(f"Error with ElevenLabs TTS: {e}")
+        return text_to_speech_gtts(text)
 

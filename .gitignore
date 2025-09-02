@@ -17,3 +17,6 @@ faiss_index/
 
 .env
 .env.template
+
+uv.lock
+pyproject.toml

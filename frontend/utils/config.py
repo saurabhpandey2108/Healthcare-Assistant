@@ -8,7 +8,10 @@ import os
 from pathlib import Path
 
 # Backend Configuration
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+# Use environment variable or default to local backend
+BACKEND_HOST = os.getenv("BACKEND_HOST", "127.0.0.1")
+BACKEND_PORT = os.getenv("BACKEND_PORT", "8000")
+BACKEND_URL = os.getenv("BACKEND_URL", f"http://{BACKEND_HOST}:{BACKEND_PORT}")
 BACKEND_TIMEOUT = 30
 
 # File Upload Configuration

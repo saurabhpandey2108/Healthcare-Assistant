@@ -1,0 +1,372 @@
+2025-08-27 16:13:28,435 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:13:28,435 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:13:48,275 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:13:48,275 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:13:52,511 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:13:52,511 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:13:54,461 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:13:54,462 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:15:14,069 - SAFESPACE_API - INFO - Image analysis requested - File: img.jpg, Query: Analyze this image for mental health insights...
+2025-08-27 16:15:18,303 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-27 16:15:18,314 - SAFESPACE_API - INFO - Image analysis completed - Confidence: 0.8
+2025-08-27 16:15:58,501 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:15:58,502 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:17:12,146 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:17:12,147 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:17:19,278 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:17:19,278 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:17:23,777 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:17:23,778 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:20:44,109 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:20:44,109 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:20:44.109003
+2025-08-27 16:20:44,110 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:20:44,110 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:20:44.110012
+2025-08-27 16:20:44,146 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:20:44,147 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:20:44.147687
+2025-08-27 16:20:44,147 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:20:44,148 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:20:44.148735
+2025-08-27 16:20:55,304 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:20:55,304 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:20:55.304428
+2025-08-27 16:20:55,305 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:20:55,305 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:20:55.305863
+2025-08-27 16:20:55,349 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:20:55,350 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:20:55.350562
+2025-08-27 16:20:55,351 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:20:55,351 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:20:55.351572
+2025-08-27 16:21:07,653 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:21:07,654 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:21:07.654951
+2025-08-27 16:21:07,702 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:21:07,702 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:21:07.702768
+2025-08-27 16:21:42,279 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:21:42,280 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:24:42,632 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:24:42,632 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:24:59,751 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:24:59,751 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:25:02,631 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:25:02,632 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:27:57,221 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:27:57,222 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:27:57.222974
+2025-08-27 16:27:57,223 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:27:57,223 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:27:57.223971
+2025-08-27 16:28:08,547 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:28:08,547 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:28:08.547002
+2025-08-27 16:28:08,583 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:28:08,583 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:28:08.583669
+2025-08-27 16:28:18,399 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:28:18,399 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:28:18.399803
+2025-08-27 16:28:18,436 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-08-27 16:28:18,436 - SAFESPACE_API - INFO - Shutdown time: 2025-08-27 16:28:18.436270
+2025-08-27 16:28:29,709 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:28:29,709 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:28:29.709838
+2025-08-27 16:28:29,762 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-08-27 16:28:29,763 - SAFESPACE_API - INFO - Startup time: 2025-08-27 16:28:29.763504
+2025-08-27 16:28:49,262 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:28:49,262 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:29:17,299 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:29:17,299 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:29:21,083 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:29:21,083 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:29:21,176 - SAFESPACE_API - INFO - Image analysis requested - File: photo (2) (1)_11zon.jpg, Query: Analyze this image for mental health insights...
+2025-08-27 16:29:21,177 - SAFESPACE_API - INFO - Temporary file created: C:\Users\saura\AppData\Local\Temp\tmpz12191oh.jpg (18236 bytes)
+2025-08-27 16:29:23,916 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-27 16:29:23,922 - SAFESPACE_API - INFO - Image analysis completed - Confidence: 0.8
+2025-08-27 16:29:23,974 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:29:23,974 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:31:40,455 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:31:40,456 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:31:40,531 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:31:40,531 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:32:39,891 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:32:39,891 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:32:45,794 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:32:45,794 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:32:45,890 - SAFESPACE_API - INFO - Image analysis requested - File: images.jpg, Query: Analyze this image for mental health insights...
+2025-08-27 16:32:45,891 - SAFESPACE_API - INFO - Temporary file created: C:\Users\saura\AppData\Local\Temp\tmpzka9bnum.jpg (6594 bytes)
+2025-08-27 16:32:52,546 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-27 16:32:52,549 - SAFESPACE_API - INFO - Image analysis completed - Confidence: 0.8
+2025-08-27 16:32:52,597 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:32:52,597 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:26,834 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:26,834 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:26,963 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:26,963 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:32,871 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:32,872 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:34,105 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:34,105 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:40,214 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:40,214 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:40,258 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:40,259 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:51,464 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:51,464 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:54,931 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:54,932 - SAFESPACE_API - INFO - System status: online
+2025-08-27 16:33:55,087 - SAFESPACE_API - INFO - Image analysis requested - File: WhatsApp Image 2025-08-27 at 15.39.33_d8e3a1ff.jpg, Query: Analyze this image for mental health insights...
+2025-08-27 16:33:55,087 - SAFESPACE_API - INFO - Temporary file created: C:\Users\saura\AppData\Local\Temp\tmpd0zl5w3t.jpg (214824 bytes)
+2025-08-27 16:33:55,685 - openai._base_client - INFO - Retrying request to /chat/completions in 0.414364 seconds
+2025-08-27 16:33:56,114 - openai._base_client - INFO - Retrying request to /chat/completions in 0.751195 seconds
+2025-08-27 16:33:58,027 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.434341 seconds
+2025-08-27 16:33:58,477 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.921179 seconds
+2025-08-27 16:33:59,422 - SAFESPACE_API - INFO - Image analysis completed - Confidence: 0.8
+2025-08-27 16:33:59,486 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 16:33:59,486 - SAFESPACE_API - INFO - System status: online
+2025-08-27 19:32:26,074 - SAFESPACE_API - INFO - System status check requested
+2025-08-27 19:32:26,076 - SAFESPACE_API - INFO - System status: online
+2025-08-28 07:34:58,834 - SAFESPACE_API - INFO - System status check requested
+2025-08-28 07:34:58,835 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:09:55,302 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:09:55,302 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:09:55.302728
+2025-09-03 01:12:07,348 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:12:07,348 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:12:07,396 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:12:07,396 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:12:07,426 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 5
+2025-09-03 01:12:10,324 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:12:10,331 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['None']
+2025-09-03 01:12:10,356 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:12:10,356 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:13:04,918 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:13:04,919 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:13:04,972 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:13:04,972 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:13:04,991 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 117
+2025-09-03 01:13:07,607 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:13:09,481 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-09-03 01:13:14,639 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:13:14,656 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['ask_medical_knowledge_base']
+2025-09-03 01:13:14,701 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:13:14,702 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:14:39,588 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:14:39,588 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:14:39,648 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:14:39,648 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:14:39,679 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 35
+2025-09-03 01:14:44,597 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:14:44,599 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['None']
+2025-09-03 01:14:44,622 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:14:44,622 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:15:18,845 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:15:18,846 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:15:18,923 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:15:18,923 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:15:18,965 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 15
+2025-09-03 01:15:22,412 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:15:24,202 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-09-03 01:15:34,966 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:15:34,981 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['ask_medical_knowledge_base']
+2025-09-03 01:15:35,003 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:15:35,003 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:19:47,413 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:19:47,414 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:19:47.414546
+2025-09-03 01:19:53,295 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:19:53,295 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:19:53.295082
+2025-09-03 01:22:42,837 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:22:42,837 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:22:42.837169
+2025-09-03 01:22:49,190 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:22:49,190 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:22:49.190004
+2025-09-03 01:22:49,190 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:22:49,191 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:22:49.190004
+2025-09-03 01:22:55,652 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:22:55,652 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:22:55.652624
+2025-09-03 01:23:00,178 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:23:00,178 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:23:00.178802
+2025-09-03 01:23:06,152 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:23:06,153 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:23:06.153795
+2025-09-03 01:23:21,832 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:23:21,832 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:23:21.832184
+2025-09-03 01:23:27,857 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:23:27,857 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:23:27.857923
+2025-09-03 01:23:27,859 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:23:27,859 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:23:27.859143
+2025-09-03 01:23:34,168 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:23:34,169 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:23:34.169199
+2025-09-03 01:24:27,730 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:24:27,730 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:24:27.730662
+2025-09-03 01:24:33,872 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:24:33,873 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:24:33.873792
+2025-09-03 01:27:13,759 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:27:13,759 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:27:13.759761
+2025-09-03 01:27:19,795 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:27:19,795 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:27:19.795327
+2025-09-03 01:29:11,624 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:29:11,624 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:29:11,690 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:29:11,690 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:29:11,724 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 59
+2025-09-03 01:29:14,685 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:29:16,868 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-09-03 01:29:24,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:29:24,449 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['get_general_health_answer']
+2025-09-03 01:29:24,493 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:29:24,493 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:30:28,667 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:30:28,668 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:30:28,721 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:30:28,721 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:30:28,751 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 35
+2025-09-03 01:30:48,299 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:30:48,302 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['None']
+2025-09-03 01:30:48,327 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:30:48,327 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:31:59,778 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:31:59,779 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:31:59,839 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:31:59,839 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:31:59,879 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 74
+2025-09-03 01:32:05,648 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:32:09,245 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-09-03 01:32:19,123 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:32:19,125 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['ask_medical_knowledge_base']
+2025-09-03 01:32:19,166 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:32:19,166 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:33:29,586 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:33:29,586 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:33:29,658 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:33:29,659 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:33:29,701 - SAFESPACE_API - INFO - Text query received - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Message length: 29
+2025-09-03 01:33:32,546 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:33:33,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-09-03 01:33:39,665 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-03 01:33:39,668 - SAFESPACE_API - INFO - Text response generated - Session: 843f9c8e-8a7c-4c51-b474-b19e6368247a, Tools used: ['ask_medical_knowledge_base']
+2025-09-03 01:33:39,693 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:33:39,693 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:46:49,724 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:46:49,724 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:46:49,750 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:46:49,750 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:47:16,458 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:47:16,458 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:50:25,890 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:50:25,892 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:50:25.892042
+2025-09-03 01:50:31,853 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:50:31,853 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:50:31.853024
+2025-09-03 01:50:41,299 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:50:41,299 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:50:41.299967
+2025-09-03 01:50:47,118 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:50:47,118 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:50:47.118297
+2025-09-03 01:51:01,594 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:51:01,594 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:51:01.594574
+2025-09-03 01:51:07,651 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:51:07,651 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:51:07.651249
+2025-09-03 01:51:22,324 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:51:22,324 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:51:22.324577
+2025-09-03 01:51:28,366 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:51:28,366 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:51:28.366675
+2025-09-03 01:51:34,703 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:51:34,703 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:51:34.703973
+2025-09-03 01:51:40,753 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:51:40,753 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:51:40.753201
+2025-09-03 01:51:46,784 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:51:46,785 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:51:46.785527
+2025-09-03 01:51:53,041 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:51:53,041 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:51:53.041036
+2025-09-03 01:52:05,805 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:52:05,805 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:52:05.805954
+2025-09-03 01:52:11,859 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:52:11,859 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:52:11.859390
+2025-09-03 01:52:22,713 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 01:52:22,713 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 01:52:22.713521
+2025-09-03 01:52:28,914 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 01:52:28,914 - SAFESPACE_API - INFO - Startup time: 2025-09-03 01:52:28.914629
+2025-09-03 01:52:48,937 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:52:48,937 - SAFESPACE_API - INFO - System status: online
+2025-09-03 01:57:26,178 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 01:57:26,179 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:00:27,456 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:00:27,457 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:00:27.457587
+2025-09-03 02:00:34,148 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:00:34,148 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:00:34.148149
+2025-09-03 02:00:38,771 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:00:38,771 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:00:38.771965
+2025-09-03 02:00:45,836 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:00:45,836 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:00:45.836236
+2025-09-03 02:00:46,643 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:00:46,643 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:00:46.643054
+2025-09-03 02:00:53,008 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:00:53,008 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:00:53.008355
+2025-09-03 02:01:06,372 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:01:06,372 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:01:06.372947
+2025-09-03 02:01:13,226 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:01:13,226 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:01:13.226920
+2025-09-03 02:01:27,598 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:01:27,599 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:01:27.599506
+2025-09-03 02:01:33,500 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:01:33,500 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:01:33.500582
+2025-09-03 02:01:33,501 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:01:33,502 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:01:44,963 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:01:44,963 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:01:44.963438
+2025-09-03 02:01:51,111 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:01:51,111 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:01:51.111041
+2025-09-03 02:02:06,088 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:02:06,089 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:02:06.089349
+2025-09-03 02:02:12,114 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:02:12,114 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:02:12.114793
+2025-09-03 02:02:44,896 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:02:44,896 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:02:44.896907
+2025-09-03 02:02:50,977 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:02:50,977 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:02:50.977847
+2025-09-03 02:03:02,234 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:03:02,235 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:03:02.235722
+2025-09-03 02:03:08,264 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:03:08,265 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:03:08.264733
+2025-09-03 02:03:10,454 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:03:10,454 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:03:18,134 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:03:18,135 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:04:21,335 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:04:21,335 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:06:18,336 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:06:18,337 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:06:18.337688
+2025-09-03 02:06:24,628 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:06:24,628 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:06:24.628009
+2025-09-03 02:06:24,629 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:06:24,629 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:06:24.629013
+2025-09-03 02:06:31,164 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:06:31,164 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:06:31.164772
+2025-09-03 02:06:35,083 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:06:35,083 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:06:35.083481
+2025-09-03 02:06:41,278 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:06:41,278 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:06:41.278154
+2025-09-03 02:06:44,432 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:06:44,432 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:07:20,980 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:07:20,980 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:07:20.980017
+2025-09-03 02:07:27,082 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:07:27,082 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:07:27.082042
+2025-09-03 02:08:00,055 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:08:00,056 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:08:00.056758
+2025-09-03 02:08:05,614 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:08:05,614 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:08:05.614224
+2025-09-03 02:08:15,166 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:08:15,167 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:08:15.167766
+2025-09-03 02:08:20,817 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:08:20,817 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:08:20.817862
+2025-09-03 02:09:14,322 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:09:14,322 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:10:36,813 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:10:36,813 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:10:36.813431
+2025-09-03 02:10:43,114 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:10:43,115 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:10:43.115841
+2025-09-03 02:10:58,397 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:10:58,398 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:10:58.398022
+2025-09-03 02:11:04,344 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:11:04,344 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:11:04.344306
+2025-09-03 02:11:07,312 - SAFESPACE_API - INFO - System status check requested
+2025-09-03 02:11:07,312 - SAFESPACE_API - INFO - System status: online
+2025-09-03 02:13:10,094 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:13:10,096 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:13:10.096060
+2025-09-03 02:13:15,914 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:13:15,915 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:13:15.915450
+2025-09-03 02:13:26,772 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:13:26,773 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:13:26.773906
+2025-09-03 02:13:33,642 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:13:33,642 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:13:33.642358
+2025-09-03 02:13:49,021 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:13:49,021 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:13:49.021043
+2025-09-03 02:13:54,846 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API starting up...
+2025-09-03 02:13:54,846 - SAFESPACE_API - INFO - Startup time: 2025-09-03 02:13:54.846272
+2025-09-03 02:16:06,723 - SAFESPACE_API - INFO - SAFESPACE AI AGENT API shutting down...
+2025-09-03 02:16:06,724 - SAFESPACE_API - INFO - Shutdown time: 2025-09-03 02:16:06.724583

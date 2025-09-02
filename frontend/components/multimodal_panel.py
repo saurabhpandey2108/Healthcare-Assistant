@@ -154,17 +154,27 @@ def analyze_image(image_path: str, analysis_type: str, custom_query: str, sessio
                 type_info = next(item for item in IMAGE_ANALYSIS_TYPES if item["type"] == analysis_type)
                 query = f"Please provide {type_info['description'].lower()} for this image"
             
-            # Make API request
-            response = requests.post(
-                ENDPOINTS['analyze_image'],
-                json={
-                    "image_path": image_path,
-                    "query": query,
-                    "session_id": st.session_state.active_chat_id,
-                    "analysis_type": analysis_type
-                },
-                timeout=30
-            )
+            # Prepare multipart form data
+            if not os.path.exists(image_path):
+                st.error(f"Image file not found: {image_path}")
+                return
+            
+            # Read the image file
+            with open(image_path, 'rb') as image_file:
+                files = {
+                    'file': (os.path.basename(image_path), image_file, 'image/jpeg')
+                }
+                data = {
+                    'query': query
+                }
+                
+                # Make API request with multipart form data
+                response = requests.post(
+                    ENDPOINTS['analyze_image'],
+                    files=files,
+                    data=data,
+                    timeout=30
+                )
             
             if response.status_code == 200:
                 result = response.json()
@@ -183,18 +193,46 @@ def analyze_image(image_path: str, analysis_type: str, custom_query: str, sessio
                     {
                         "tool_called": "analyze_uploaded_image",
                         "analysis_type": analysis_type,
-                        "image_path": image_path
+                        "image_path": image_path,
+                        "confidence": result.get('confidence', 0.8),
+                        "tools_used": result.get('tools_used', [])
                     }
                 )
                 
                 st.success("✅ Image analysis completed! Check the chat for results.")
+                
+                # Display quick preview of results
+                with st.expander("📊 Analysis Preview", expanded=True):
+                    st.markdown(f"**Analysis:** {analysis[:200]}{'...' if len(analysis) > 200 else ''}")
+                    
+                    if result.get('emotional_indicators'):
+                        st.markdown(f"**Emotional Indicators:** {', '.join(result['emotional_indicators'])}")
+                    
+                    if result.get('confidence'):
+                        st.markdown(f"**Confidence:** {result['confidence']:.2%}")
+                
                 st.rerun()
                 
-            else:
-                st.error(f"Analysis failed: {response.status_code}")
+            elif response.status_code == 422:
+                error_detail = response.json().get('detail', 'Validation error')
+                st.error(f"❌ Request format error: {error_detail}")
+                st.info("💡 Please try uploading the image again or contact support.")
                 
+            else:
+                st.error(f"❌ Analysis failed with status {response.status_code}")
+                try:
+                    error_detail = response.json().get('detail', 'Unknown error')
+                    st.error(f"Error details: {error_detail}")
+                except:
+                    st.error(f"Response: {response.text[:200]}")
+                
+    except requests.exceptions.Timeout:
+        st.error("❌ Request timed out. The server may be busy. Please try again.")
+    except requests.exceptions.ConnectionError:
+        st.error("❌ Cannot connect to the backend. Please check if the API server is running.")
     except Exception as e:
-        st.error(f"Error analyzing image: {str(e)}")
+        st.error(f"❌ Error analyzing image: {str(e)}")
+        st.error("💡 Please try again or contact support if the issue persists.")
 
 
 def remove_uploaded_image(filename: str):
