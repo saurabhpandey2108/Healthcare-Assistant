@@ -31,5 +31,7 @@ scikit-learn
 openpyxl
 pdfminer-six
 langchain-experimental
-sounddevice 
-pyaudio==0.2.14
+chromadb
+groq
+pygame
+pydeck
