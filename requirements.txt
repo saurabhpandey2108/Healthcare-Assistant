@@ -18,3 +18,4 @@ langchain_community
 pypdf
 bs4
 geopy
+gtts
