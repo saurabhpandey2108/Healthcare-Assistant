@@ -14,7 +14,7 @@ class SessionManager:
     """Manages user sessions and chat history"""
     
     def __init__(self):
-        self.backend_url = "http://localhost:8000"
+        self.backend_url = "https://healthcare-assistant-y37l.onrender.com"
     
     def initialize_session_state(self):
         """Initialize all session state variables"""
