@@ -19,3 +19,16 @@ pypdf
 bs4
 geopy
 gtts
+pygame
+torch
+transformers
+accelerate
+sentencepiece
+numpy
+pandas
+scipy
+scikit-learn
+openpyxl
+pdfminer-six
+langchain-experimental
+sounddevice 
