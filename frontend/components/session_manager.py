@@ -29,6 +29,8 @@ class SessionManager:
                 "title": "New Chat",
                 "history": [],
                 "indexed_items": set(),
+                "multimodal_images": set(),
+                "multimodal_audio": set(),
                 "session_type": "general",
                 "created_at": datetime.now().isoformat(),
                 "last_updated": datetime.now().isoformat()
@@ -63,6 +65,8 @@ class SessionManager:
             "title": "New Chat",
             "history": [],
             "indexed_items": set(),
+            "multimodal_images": set(),
+            "multimodal_audio": set(),
             "session_type": session_type,
             "created_at": datetime.now().isoformat(),
             "last_updated": datetime.now().isoformat()
@@ -158,6 +162,83 @@ class SessionManager:
             st.session_state.all_chats[active_chat_id]["indexed_items"] = indexed_items
             
         return indexed_items
+    
+    # Multimodal management methods - Fixed indentation to be part of the class
+    def add_multimodal_image(self, image_name: str):
+        """Add an image to the multimodal collection for the active chat"""
+        active_chat_id = st.session_state.active_chat_id
+        multimodal_images = st.session_state.all_chats[active_chat_id].get("multimodal_images", set())
+            
+        # Ensure it's a set
+        if not isinstance(multimodal_images, set):
+            multimodal_images = set(multimodal_images) if multimodal_images else set()
+                
+        multimodal_images.add(image_name)
+        st.session_state.all_chats[active_chat_id]["multimodal_images"] = multimodal_images
+    
+    def remove_multimodal_image(self, image_name: str):
+        """Remove an image from the multimodal collection for the active chat"""
+        active_chat_id = st.session_state.active_chat_id
+        multimodal_images = st.session_state.all_chats[active_chat_id].get("multimodal_images", set())
+            
+        # Ensure it's a set
+        if not isinstance(multimodal_images, set):
+            multimodal_images = set(multimodal_images) if multimodal_images else set()
+                
+        multimodal_images.discard(image_name)
+        st.session_state.all_chats[active_chat_id]["multimodal_images"] = multimodal_images
+    
+    def get_multimodal_images(self) -> set:
+        """Get multimodal images for the active chat"""
+        active_chat = self.get_active_chat()
+        multimodal_images = active_chat.get("multimodal_images", set())
+            
+        # Ensure it's a set
+        if not isinstance(multimodal_images, set):
+            multimodal_images = set(multimodal_images) if multimodal_images else set()
+            # Update the session state with proper set
+            active_chat_id = st.session_state.active_chat_id
+            st.session_state.all_chats[active_chat_id]["multimodal_images"] = multimodal_images
+                
+        return multimodal_images
+    
+    def add_multimodal_audio(self, audio_name: str):
+        """Add an audio file to the multimodal collection for the active chat"""
+        active_chat_id = st.session_state.active_chat_id
+        multimodal_audio = st.session_state.all_chats[active_chat_id].get("multimodal_audio", set())
+            
+        # Ensure it's a set
+        if not isinstance(multimodal_audio, set):
+            multimodal_audio = set(multimodal_audio) if multimodal_audio else set()
+                
+        multimodal_audio.add(audio_name)
+        st.session_state.all_chats[active_chat_id]["multimodal_audio"] = multimodal_audio
+    
+    def remove_multimodal_audio(self, audio_name: str):
+        """Remove an audio file from the multimodal collection for the active chat"""
+        active_chat_id = st.session_state.active_chat_id
+        multimodal_audio = st.session_state.all_chats[active_chat_id].get("multimodal_audio", set())
+            
+        # Ensure it's a set
+        if not isinstance(multimodal_audio, set):
+            multimodal_audio = set(multimodal_audio) if multimodal_audio else set()
+                
+        multimodal_audio.discard(audio_name)
+        st.session_state.all_chats[active_chat_id]["multimodal_audio"] = multimodal_audio
+    
+    def get_multimodal_audio(self) -> set:
+        """Get multimodal audio files for the active chat"""
+        active_chat = self.get_active_chat()
+        multimodal_audio = active_chat.get("multimodal_audio", set())
+            
+        # Ensure it's a set
+        if not isinstance(multimodal_audio, set):
+            multimodal_audio = set(multimodal_audio) if multimodal_audio else set()
+            # Update the session state with proper set
+            active_chat_id = st.session_state.active_chat_id
+            st.session_state.all_chats[active_chat_id]["multimodal_audio"] = multimodal_audio
+                
+        return multimodal_audio
     
     def export_chat_history(self, format: str = "json") -> str:
         """Export chat history in specified format"""

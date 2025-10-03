@@ -2,33 +2,47 @@ from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 from backend.config import OPENAI_API_KEY
 from core.tools import (
-    get_general_health_answer,  # Corrected import
-    ask_web_for_health_info,    # Corrected import
+    get_general_health_answer,  
+    ask_web_for_health_info,    
     emergency_call_tool,
     find_nearby_therapists_by_location,
     ask_medical_knowledge_base,
     find_mental_health_articles,
     get_daily_affirmation,
-    suggest_breathing_exercise
+    suggest_breathing_exercise,
+    # Add new healthcare tools
+    get_medication_information,
+    find_disease_symptoms,
+    suggest_preventive_care,
+    find_healthcare_providers,
+    analyze_health_metrics,
+    suggest_diet_plan
 )
 
-# Use the corrected tool names in the list
+# Update the tools list with new healthcare tools
 tools = [
     get_general_health_answer,
     ask_web_for_health_info,
     emergency_call_tool,
     find_nearby_therapists_by_location,
     ask_medical_knowledge_base,
-    find_mental_health_articles, # new
-    get_daily_affirmation,       # new
-    suggest_breathing_exercise
+    find_mental_health_articles,
+    get_daily_affirmation,
+    suggest_breathing_exercise,
+    # Add new healthcare tools
+    get_medication_information,
+    find_disease_symptoms,
+    suggest_preventive_care,
+    find_healthcare_providers,
+    analyze_health_metrics,
+    suggest_diet_plan
 ]
 
 llm = ChatOpenAI(model="gpt-4", temperature=0.2, api_key=OPENAI_API_KEY)
 
-# Update the system prompt to accurately describe the new primary tool
+# Update the system prompt to include healthcare focus
 SYSTEM_PROMPT = """
-You are an AI engine supporting mental health conversations...
+You are an AI engine supporting comprehensive healthcare conversations, with expertise in both mental and physical health...
 You have access to these tools:
 
 1. `get_general_health_answer`: Use this for all general health and emotional queries.
@@ -39,6 +53,12 @@ You have access to these tools:
 6. `find_mental_health_articles`: Use to find recent articles and research on a topic.
 7. `get_daily_affirmation`: Use to provide a positive affirmation.
 8. `suggest_breathing_exercise`: Use when the user feels anxious or overwhelmed.
+9. `get_medication_information`: Use when users ask about specific medications.
+10. `find_disease_symptoms`: Use when users ask about specific health conditions.
+11. `suggest_preventive_care`: Use when users ask about health screenings.
+12. `find_healthcare_providers`: Use when users need to find doctors or specialists.
+13. `analyze_health_metrics`: Use when users share health measurements.
+14. `suggest_diet_plan`: Use when users ask about nutrition for health conditions.
 
 ...
 """

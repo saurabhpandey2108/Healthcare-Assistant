@@ -18,7 +18,7 @@ from models.business_models import (
     VoiceAnalysisResult,
     ConversationManager,
     RiskAssessment,
-    MentalHealthCondition,
+    HealthCondition,  # Changed from MentalHealthCondition
     EmotionalState,
     InteractionType
 )

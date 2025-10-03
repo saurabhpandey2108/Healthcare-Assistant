@@ -1,8 +1,8 @@
-# 🌟 SAFESPACE AI AGENT - Multimodal Mental Health Assistant
+# 🌟 SAFESPACE AI AGENT - Multimodal Healthcare Assistant
 
 ## 📋 Overview
 
-SAFESPACE AI AGENT is a comprehensive multimodal mental health assistant built with proper **MVC (Model-View-Controller) architecture**. The system provides empathetic mental health support through **text**, **images**, and **voice** interactions, with **OpenAI as the primary AI provider** and GROQ as fallback.
+SAFESPACE AI AGENT is a comprehensive multimodal healthcare assistant with a focus on mental health support, built with proper **MVC (Model-View-Controller) architecture**. The system provides empathetic healthcare support through **text**, **images**, and **voice** interactions, with **OpenAI as the primary AI provider** and GROQ as fallback.
 
 The system features two modern web interfaces:
 - **Gradio Interface**: Advanced multimodal web interface with real-time processing

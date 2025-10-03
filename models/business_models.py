@@ -11,13 +11,24 @@ from datetime import datetime
 from enum import Enum
 
 
-class MentalHealthCondition(str, Enum):
-    """Common mental health conditions the AI can help with"""
+class HealthCondition(str, Enum):
+    """Common health conditions the AI can help with"""
+    # Mental health conditions
     ANXIETY = "anxiety"
     DEPRESSION = "depression"
     STRESS = "stress"
     PANIC = "panic"
     PTSD = "ptsd"
+    
+    # Physical health conditions
+    DIABETES = "diabetes"
+    HYPERTENSION = "hypertension"
+    ASTHMA = "asthma"
+    ARTHRITIS = "arthritis"
+    OBESITY = "obesity"
+    HEART_DISEASE = "heart_disease"
+    
+    # General
     GENERAL = "general"
     EMERGENCY = "emergency"
 
@@ -137,7 +148,7 @@ class MentalHealthResource:
     contact_info: str
     availability: str = "24/7"
     location: Optional[str] = None
-    specialization: List[MentalHealthCondition] = field(default_factory=list)
+    specialization: List[HealthCondition] = field(default_factory=list)
 
 
 @dataclass
@@ -290,3 +301,40 @@ class RiskAssessment:
 
 # Global conversation manager instance
 conversation_manager = ConversationManager()
+
+
+@dataclass
+class PhysicalHealthAssessment:
+    """Assessment of physical health indicators"""
+    user_id: str
+    vital_signs: Dict[str, float] = field(default_factory=dict)  # bp, heart rate, etc.
+    symptoms: List[str] = field(default_factory=list)
+    chronic_conditions: List[HealthCondition] = field(default_factory=list)
+    medications: List[str] = field(default_factory=list)
+    allergies: List[str] = field(default_factory=list)
+    last_checkup: Optional[datetime] = None
+    timestamp: datetime = field(default_factory=datetime.now)
+
+@dataclass
+class MedicationInfo:
+    """Information about a medication"""
+    name: str
+    dosage: str
+    frequency: str
+    purpose: str
+    side_effects: List[str] = field(default_factory=list)
+    contraindications: List[str] = field(default_factory=list)
+    start_date: Optional[datetime] = None
+    end_date: Optional[datetime] = None
+
+@dataclass
+class HealthcareProviderRecommendation:
+    """Healthcare provider recommendation"""
+    name: str
+    specialty: str
+    location: str
+    contact_info: str
+    availability: str
+    insurance_accepted: List[str] = field(default_factory=list)
+    rating: Optional[float] = None
+    distance: Optional[float] = None  # in miles/km

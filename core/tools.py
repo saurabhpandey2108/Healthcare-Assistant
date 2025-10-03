@@ -280,7 +280,7 @@ def process_image_for_analysis(image_path: str) -> Optional[str]:
         print(f"Error processing image: {e}")
         return None
 
-def analyze_image_with_groq(image_base64: str, query: str = "Analyze this image for mental health insights") -> str:
+def analyze_image_with_groq(image_base64: str, query: str = "Analyze this image for health insights") -> str:
     """
     Analyze image using GROQ Vision API or OpenAI GPT-4 Vision.
     
@@ -300,7 +300,7 @@ def analyze_image_with_groq(image_base64: str, query: str = "Analyze this image 
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are Dr. Emily Hartman, a compassionate clinical psychologist specializing in art therapy and visual emotional analysis. Analyze images with empathy and provide therapeutic insights."
+                        "content": "You are Dr. Emily Hartman, a compassionate healthcare professional with expertise in both physical and mental health. Analyze images with empathy and provide healthcare insights. For skin conditions, wounds, or physical symptoms, provide possible conditions it might represent (with clear disclaimer that this is not a diagnosis). For charts or medical documents, extract and explain key information. For emotional or mental health related images, provide therapeutic insights."
                     },
                     {
                         "role": "user",
@@ -321,7 +321,7 @@ def analyze_image_with_groq(image_base64: str, query: str = "Analyze this image 
         except Exception as e:
             print(f"OpenAI Vision analysis failed: {e}")
     
-    # Fallback to GROQ
+    # Fallback to GROQ with updated system prompt
     if GROQ_API_KEY:
         try:
             client = Groq(api_key=GROQ_API_KEY)
@@ -438,4 +438,103 @@ def text_to_speech_elevenlabs(text: str, voice_id: str = "EXAVITQu4vr4xnSDxMaL")
     except Exception as e:
         print(f"Error with ElevenLabs TTS: {e}")
         return text_to_speech_gtts(text)
+
+
+@tool
+def get_medication_information(medication_name: str) -> str:
+    """
+    Provides information about medications including usage, side effects, and contraindications.
+    Use this when users ask about specific medications or treatments.
+    """
+    search = DuckDuckGoSearchRun()
+    return search.run(f"medical information about {medication_name} usage dosage side effects")
+
+@tool
+def find_disease_symptoms(condition: str) -> str:
+    """
+    Provides information about symptoms, causes, and treatments for various medical conditions.
+    Use this when users ask about specific diseases or health conditions.
+    """
+    search = DuckDuckGoSearchRun()
+    return search.run(f"medical symptoms causes treatments for {condition}")
+
+@tool
+def suggest_preventive_care(age_group: str, gender: str = "any") -> str:
+    """
+    Provides preventive care recommendations based on age group and gender.
+    Use this when users ask about health screenings or preventive measures.
+    """
+    search = DuckDuckGoSearchRun()
+    return search.run(f"recommended preventive healthcare screenings for {age_group} {gender}")
+
+@tool
+def find_healthcare_providers(specialty: str, location: str) -> str:
+    """
+    Finds healthcare providers of a specific specialty in the given location.
+    Use this when users need to find doctors, specialists, or healthcare facilities.
+    """
+    geolocator = Nominatim(user_agent="safespace_ai_agent")
+    try:
+        location_data = geolocator.geocode(location)
+        if not location_data:
+            return f"Could not find the location: {location}. Please try being more specific."
+
+        lat, lon = location_data.latitude, location_data.longitude
+
+        # Use Overpass API to find healthcare providers
+        overpass_url = "http://overpass-api.de/api/interpreter"
+        overpass_query = f"""
+        [out:json];
+        (
+          node["healthcare"="{specialty}"](around:10000,{lat},{lon});
+          way["healthcare"="{specialty}"](around:10000,{lat},{lon});
+          node["amenity"="hospital"](around:10000,{lat},{lon});
+          node["amenity"="clinic"](around:10000,{lat},{lon});
+          node["amenity"="doctors"](around:10000,{lat},{lon});
+        );
+        out center;
+        """
+        response = requests.get(overpass_url, params={'data': overpass_query})
+        data = response.json()
+
+        if not data.get('elements'):
+            return f"No healthcare providers for {specialty} found near {location}."
+
+        # Format the results
+        provider_list = []
+        for place in data['elements'][:5]:  # Return top 5 results
+            tags = place.get('tags', {})
+            name = tags.get('name', 'Name not available')
+            address_parts = [
+                tags.get('addr:street'),
+                tags.get('addr:city'),
+                tags.get('addr:postcode')
+            ]
+            address = ", ".join(filter(None, address_parts)) or 'Address not available'
+            provider_list.append(f"- **{name}**\n  - Address: {address}")
+
+        return f"Here are some {specialty} providers found near {location}:\n" + "\n".join(provider_list)
+
+    except Exception as e:
+        return f"An error occurred while searching for healthcare providers: {e}"
+
+@tool
+def analyze_health_metrics(metrics: str) -> str:
+    """
+    Analyzes health metrics like blood pressure, glucose levels, etc. and provides insights.
+    Use this when users share health measurements and want interpretation.
+    """
+    # This would ideally connect to a medical reference database
+    # For now, we'll use web search to provide general guidance
+    search = DuckDuckGoSearchRun()
+    return search.run(f"interpret health metrics {metrics} normal ranges medical advice")
+
+@tool
+def suggest_diet_plan(health_condition: str, dietary_restrictions: str = "none") -> str:
+    """
+    Suggests dietary recommendations for specific health conditions.
+    Use this when users ask about nutrition for managing health conditions.
+    """
+    search = DuckDuckGoSearchRun()
+    return search.run(f"recommended diet for {health_condition} with {dietary_restrictions} restrictions nutrition guidelines")
 

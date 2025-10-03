@@ -25,10 +25,10 @@ from frontend.utils.config import BACKEND_URL
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="🧠 SAFESPACE AI AGENT",
+    page_title="🏥 SAFESPACE Healthcare Assistant",
     layout="wide",
     initial_sidebar_state="expanded",
-    page_icon="🧠"
+    page_icon="🏥"
 )
 
 # Apply custom styling
