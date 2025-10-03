@@ -33,3 +33,4 @@ pdfminer-six
 langchain-experimental
 groq
 elevenlabs
+pyaudio
