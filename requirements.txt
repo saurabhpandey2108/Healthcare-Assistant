@@ -32,3 +32,4 @@ openpyxl
 pdfminer-six
 langchain-experimental
 sounddevice 
+pyaudio==0.2.14
