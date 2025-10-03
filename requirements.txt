@@ -31,3 +31,5 @@ scikit-learn
 openpyxl
 pdfminer-six
 langchain-experimental
+groq
+elevenlabs
